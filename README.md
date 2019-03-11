@@ -57,13 +57,12 @@ assets/litepal.xml中添加mapping  <mapping class="com.cample.app.Album" />(在
 
 #IModuleConfiguration的实现类不能混淆
 
--keepclasseswithmembers class * implements app.component.foundation.IModuleConfiguration {
+-keepclasseswithmembers class * implements app.component.simple.IModuleConfiguration {
 <init>(...); }
 
 #BaseResponseEntity的子类不能混淆
 
--keepclasseswithmembers class * extends app.component.foundation.http.entity.BaseResponseEntity {
-<init>(...); }
+-keepclasseswithmembers class * extends app.component.simple.http.entity.BaseResponseEntity { (...); }
 
 #Arouter混淆配置
 
